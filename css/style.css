@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --bg: #0b0b0b;
+  --surface: #141414;
+  --gold: #d6b36a;
+  --gold-hover: #e8c982;
+  --text: #f5f2eb;
+  --muted: #99958c;
+  --border: #30302d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold-hover);
+}
+
+.auth-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #242016 0%, transparent 48%),
+    var(--bg);
+}
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 36px 20px 22px;
+}
+
+.brand {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 30px;
+  color: var(--text);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.brand span {
+  color: var(--gold);
+}
+
+.auth-card {
+  padding: 36px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.96);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.auth-card h1 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 35px);
+  font-weight: 600;
+}
+
+.muted {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.form-label {
+  margin-bottom: 8px;
+  color: #e5e0d7;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-control {
+  min-height: 49px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #0e0e0e;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.form-control::placeholder {
+  color: #77736d;
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+  background-color: #0e0e0e;
+  color: var(--text);
+  box-shadow: 0 0 0 3px rgba(214, 179, 106, 0.12);
+}
+
+.form-control.is-invalid {
+  border-color: #dc6464;
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap .form-control {
+  padding-right: 65px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.password-hint {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.btn-gold {
+  min-height: 49px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: var(--gold);
+  color: #14110b;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn-gold:hover {
+  border-color: var(--gold-hover);
+  background: var(--gold-hover);
+  color: #14110b;
+  transform: translateY(-1px);
+}
+
+.auth-footer {
+  margin: 25px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.auth-footer a {
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+.copyright {
+  margin: 24px 0 0;
+  color: #6e6a62;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.alert {
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.alert-success {
+  border-color: #28583a;
+  background: #14291b;
+  color: #a9e6b8;
+}
+
+.alert-danger {
+  border-color: #6a3030;
+  background: #2c1717;
+  color: #ffb8b8;
+}
+
+.store-nav {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.store-content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.store-hero {
+  padding: 65px 25px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #211d14, #111111 65%);
+  text-align: center;
+}
+
+.store-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 60px);
+}
+
+.store-hero p {
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .auth-wrapper {
+    padding: 24px 14px;
+  }
+
+  .auth-card {
+    padding: 25px 20px;
+  }
+
+  .brand {
+    margin-bottom: 23px;
+  }
+}
